@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wmove - Consultoria de Viagens</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wmove-orange': '#e86a33',
+                        'wmove-green': '#0f4c3a',
+                        'wmove-light': '#fdfcfb',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-wmove-light font-sans text-gray-800">
+
+    <!-- Navegação / Header -->
+    <nav class="bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <!-- Logo oficial -->
+            <a href="index.html" class="text-2xl font-serif font-bold text-wmove-green"><span class="text-wmove-orange">W</span>move</a>
+        </div>
+        
+        <!-- Menu Desktop (Links Corrigidos) -->
+        <ul class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+            <li><a href="lazer.html" class="hover:text-wmove-orange transition">Lazer</a></li>
+            <li><a href="corporativo.html" class="hover:text-wmove-orange transition">Corporativo</a></li>
+            <li><a href="grupos.html" class="hover:text-wmove-orange transition">Grupos</a></li>
+            <li><a href="eventos.html" class="hover:text-wmove-orange transition">Eventos</a></li>
+            <li><a href="sobre.html" class="hover:text-wmove-orange transition">Sobre</a></li>
+            <li><a href="blog.html" class="hover:text-wmove-orange transition">Blog</a></li>
+        </ul>
+
+        <!-- Botões Desktop (Transformados em Links) -->
+        <div class="hidden md:flex items-center gap-4">
+            <a href="contato.html" class="bg-wmove-orange text-white px-5 py-2 rounded font-medium hover:bg-orange-600 transition">Planejar Viagem</a>
+            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20ajuda%20para%20planejar%20uma%20viagem." target="_blank" class="text-green-500 text-2xl hover:text-green-600 transition"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <!-- Botão Menu Mobile -->
+        <button id="mobile-menu-btn" class="md:hidden text-2xl text-wmove-green focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Menu Mobile Dropdown (Adicionado para Mobile) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full left-0 z-40">
+        <ul class="flex flex-col text-center py-4 gap-4 text-gray-600 font-medium">
+            <li><a href="lazer.html" class="block hover:text-wmove-orange">Lazer</a></li>
+            <li><a href="corporativo.html" class="block hover:text-wmove-orange">Corporativo</a></li>
+            <li><a href="grupos.html" class="block hover:text-wmove-orange">Grupos</a></li>
+            <li><a href="eventos.html" class="block hover:text-wmove-orange">Eventos</a></li>
+            <li><a href="sobre.html" class="block hover:text-wmove-orange">Sobre Nós</a></li>
+            <li><a href="contato.html" class="block hover:text-wmove-orange">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-[80vh] flex items-center justify-center text-center md:text-left bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <!-- Overlay escuro para destacar o texto -->
+        <div class="absolute inset-0 bg-black/40"></div>
+        
+        <div class="relative z-10 px-6 md:px-24 w-full max-w-7xl">
+            <h1 class="text-4xl md:text-6xl text-white font-serif mb-4 leading-tight">
+                Viagens planejadas <br> com inteligência e <i class="font-light">experiência.</i>
+            </h1>
+            <p class="text-white/90 md:text-lg mb-8 max-w-2xl">
+                Experiências de lazer, viagens corporativas, grupos e eventos com atendimento personalizado.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <!-- Botões Hero Transformados em Links -->
+                <a href="contato.html" class="bg-wmove-orange text-white px-8 py-3 rounded font-medium hover:bg-orange-600 transition text-center inline-block">Planejar minha viagem</a>
+                <a href="contato.html" class="bg-wmove-green text-white px-8 py-3 rounded font-medium hover:bg-emerald-900 transition text-center inline-block">Falar com consultor</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introdução -->
+    <section class="py-20 px-6 md:px-24 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-serif text-wmove-green mb-6">Uma nova forma de planejar viagens</h2>
+            <p class="text-gray-600 text-lg leading-relaxed border-l-4 border-wmove-orange pl-4">
+                Na Wmove, cada viagem é planejada com cuidado e dedicação, transformando sonhos em experiências memoráveis.
+            </p>
+        </div>
+        <div class="md:w-1/2">
+    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Planejando viagem" class="rounded-xl shadow-lg w-full object-cover h-64">
+</div>
+    </section>
+
+    <!-- Soluções (Cards com Links Corrigidos) -->
+    <section class="py-16 bg-white px-6 md:px-24">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-serif text-center text-wmove-green mb-12">Soluções completas em viagens</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Card 1 (Lazer) -->
+                <a href="lazer.html" class="relative group overflow-hidden rounded-lg shadow-md cursor-pointer h-64 block">
+                    <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Lazer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                        <h3 class="text-white text-xl font-serif">Lazer</h3>
+                        <p class="text-wmove-green text-sm font-bold bg-white/90 px-2 py-1 rounded inline-block w-max mt-1">Viagens Personalizadas</p>
+                    </div>
+                </a>
+                <!-- Card 2 (Corporativo) -->
+                <a href="corporativo.html" class="relative group overflow-hidden rounded-lg shadow-md cursor-pointer h-64 block">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Corporativo">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                        <h3 class="text-white text-xl font-serif">Corporativo</h3>
+                        <p class="text-wmove-green text-sm font-bold bg-white/90 px-2 py-1 rounded inline-block w-max mt-1">Gestão de Viagens</p>
+                    </div>
+                </a>
+                <!-- Card 3 (Grupos) -->
+                <a href="grupos.html" class="relative group overflow-hidden rounded-lg shadow-md cursor-pointer h-64 block">
+                    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Grupos">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                        <h3 class="text-white text-xl font-serif">Grupos</h3>
+                        <p class="text-wmove-green text-sm font-bold bg-white/90 px-2 py-1 rounded inline-block w-max mt-1">Viagens Corporativas</p>
+                    </div>
+                </a>
+                <!-- Card 4 (Eventos) -->
+                <a href="eventos.html" class="relative group overflow-hidden rounded-lg shadow-md cursor-pointer h-64 block">
+                    <img src="https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Eventos">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                        <h3 class="text-white text-xl font-serif">Eventos</h3>
+                        <p class="text-wmove-green text-sm font-bold bg-white/90 px-2 py-1 rounded inline-block w-max mt-1">Viagens e Incentivos</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 px-6 md:px-24 bg-wmove-light text-center border-y border-gray-200">
+        <h2 class="text-2xl md:text-3xl font-serif text-gray-700 mb-10">Mais que uma agência. <span class="text-wmove-orange">Uma consultoria de viagens.</span></h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-map-marked-alt text-4xl text-wmove-orange mb-3"></i>
+                <h4 class="font-bold text-gray-800">Planejamento<br>Personalizado</h4>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-gem text-4xl text-wmove-orange mb-3"></i>
+                <h4 class="font-bold text-gray-800">Curadoria de<br>Experiências</h4>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-headset text-4xl text-wmove-orange mb-3"></i>
+                <h4 class="font-bold text-gray-800">Suporte Completo<br>24 horas</h4>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-handshake text-4xl text-wmove-orange mb-3"></i>
+                <h4 class="font-bold text-gray-800">Relacionamento<br>Próximo</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="py-16 px-6 md:px-24 bg-white text-center">
+        <h2 class="text-3xl font-serif text-gray-700 mb-12">Como Funciona</h2>
+        
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 max-w-5xl mx-auto">
+            <div class="text-center">
+                <span class="text-5xl font-serif text-wmove-orange block mb-2">01</span>
+                <p class="font-medium text-gray-600">Entendimento</p>
+            </div>
+            <i class="fas fa-chevron-right text-gray-300 hidden md:block text-2xl"></i>
+            <div class="text-center">
+                <span class="text-5xl font-serif text-wmove-green block mb-2">02</span>
+                <p class="font-medium text-gray-600">Planejamento</p>
+            </div>
+            <i class="fas fa-chevron-right text-gray-300 hidden md:block text-2xl"></i>
+            <div class="text-center">
+                <span class="text-5xl font-serif text-yellow-500 block mb-2">03</span>
+                <p class="font-medium text-gray-600">Reservas e Logística</p>
+            </div>
+            <i class="fas fa-chevron-right text-gray-300 hidden md:block text-2xl"></i>
+            <div class="text-center">
+                <span class="text-5xl font-serif text-blue-800 block mb-2">04</span>
+                <p class="font-medium text-gray-600">Suporte na Viagem</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="relative py-20 flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-wmove-orange/60 mix-blend-multiply"></div>
+        <div class="relative z-10 px-6">
+            <h2 class="text-3xl md:text-4xl text-white font-serif mb-8">Vamos planejar sua próxima viagem?</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <!-- Botões Footer Corrigidos -->
+                <a href="contato.html" class="bg-white/20 border-2 border-white text-white px-8 py-3 rounded font-medium hover:bg-white hover:text-wmove-orange transition backdrop-blur-sm inline-block text-center">Planejar Viagem</a>
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20ajuda%20para%20planejar%20uma%20viagem." target="_blank" class="bg-wmove-green text-white px-8 py-3 rounded font-medium hover:bg-emerald-900 transition shadow-lg inline-block text-center">Falar no WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Basico -->
+    <footer class="bg-white py-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">© 2026 Wmove Consultoria de Viagens. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script Adicionado para funcionar o Menu Mobile -->
+    <script src="script.js"></script>
+
+</body>
+</html>

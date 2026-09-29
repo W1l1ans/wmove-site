@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagens em Grupo - Wmove Consultoria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { 'wmove-orange': '#e86a33', 'wmove-green': '#0f4c3a', 'wmove-light': '#fdfcfb' }, fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] } } }
+        }
+    </script>
+</head>
+<body class="bg-wmove-light font-sans text-gray-800">
+
+    <!-- Header -->
+    <nav class="bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="text-2xl font-serif font-bold text-wmove-green"><span class="text-wmove-orange">W</span>move</a>
+        </div>
+        <ul class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+            <li><a href="lazer.html" class="hover:text-wmove-orange transition">Lazer</a></li>
+            <li><a href="corporativo.html" class="hover:text-wmove-orange transition">Corporativo</a></li>
+            <li><a href="grupos.html" class="text-wmove-orange transition">Grupos</a></li>
+            <li><a href="eventos.html" class="hover:text-wmove-orange transition">Eventos</a></li>
+            <li><a href="sobre.html" class="hover:text-wmove-orange transition">Sobre</a></li>
+            <li><a href="blog.html" class="hover:text-wmove-orange transition">Blog</a></li>
+        </ul>
+        <div class="hidden md:flex items-center gap-4">
+            <a href="contato.html" class="bg-wmove-orange text-white px-5 py-2 rounded font-medium hover:bg-orange-600 transition">Planejar Viagem</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-2xl text-wmove-green"><i class="fas fa-bars"></i></button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full left-0 z-40">
+        <ul class="flex flex-col text-center py-4 gap-4 text-gray-600 font-medium">
+            <li><a href="lazer.html" class="block hover:text-wmove-orange">Lazer</a></li>
+            <li><a href="grupos.html" class="block text-wmove-orange">Grupos</a></li>
+            <li><a href="sobre.html" class="block hover:text-wmove-orange">Sobre Nós</a></li>
+            <li><a href="contato.html" class="block hover:text-wmove-orange">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Grupos -->
+    <header class="relative h-[60vh] flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 px-6 max-w-4xl">
+            <h1 class="text-4xl md:text-5xl text-white font-serif mb-4">Viagens em Grupo sem Complicações</h1>
+            <p class="text-white/90 text-lg mb-8">Da família aos amigos, nós coordenamos toda a logística para que vocês apenas colecionem memórias.</p>
+            <a href="contato.html" class="bg-wmove-orange text-white px-8 py-3 rounded font-medium hover:bg-orange-600 transition">Solicitar cotação para meu grupo</a>
+        </div>
+    </header>
+
+    <!-- Benefícios Grupos -->
+    <section class="py-16 px-6 md:px-24 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+                <i class="fas fa-bus text-4xl text-wmove-green mb-4"></i>
+                <h3 class="text-xl font-serif text-gray-800 mb-2">Logística Integrada</h3>
+                <p class="text-gray-600 text-sm">Sincronizamos voos de diferentes origens, coordenamos traslados terrestres e garantimos hospedagens próximas.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+                <i class="fas fa-tags text-4xl text-wmove-green mb-4"></i>
+                <h3 class="text-xl font-serif text-gray-800 mb-2">Condições Especiais</h3>
+                <p class="text-gray-600 text-sm">Negociamos bloqueios aéreos e tarifas diferenciadas em hotéis e resorts para reduzir o custo individual.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+                <i class="fas fa-map text-4xl text-wmove-green mb-4"></i>
+                <h3 class="text-xl font-serif text-gray-800 mb-2">Roteiros Compartilhados</h3>
+                <p class="text-gray-600 text-sm">Desenhamos atividades que agradam diferentes faixas etárias e interesses dentro do mesmo grupo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">© 2026 Wmove Consultoria de Viagens. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

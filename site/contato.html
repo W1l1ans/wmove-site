@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejar Viagem - Wmove Consultoria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { 'wmove-orange': '#e86a33', 'wmove-green': '#0f4c3a', 'wmove-light': '#fdfcfb' }, fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] } } }
+        }
+    </script>
+</head>
+<body class="bg-wmove-light font-sans text-gray-800">
+
+    <!-- Header -->
+    <nav class="bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="text-2xl font-serif font-bold text-wmove-green"><span class="text-wmove-orange">W</span>move</a>
+        </div>
+        <ul class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+            <li><a href="lazer.html" class="hover:text-wmove-orange transition">Lazer</a></li>
+            <li><a href="corporativo.html" class="hover:text-wmove-orange transition">Corporativo</a></li>
+            <li><a href="sobre.html" class="hover:text-wmove-orange transition">Sobre</a></li>
+            <li><a href="contato.html" class="text-wmove-orange transition">Contato</a></li>
+        </ul>
+        <button id="mobile-menu-btn" class="md:hidden text-2xl text-wmove-green"><i class="fas fa-bars"></i></button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full left-0 z-40">
+        <ul class="flex flex-col text-center py-4 gap-4 text-gray-600 font-medium">
+            <li><a href="lazer.html" class="block hover:text-wmove-orange">Lazer</a></li>
+            <li><a href="sobre.html" class="block hover:text-wmove-orange">Sobre Nós</a></li>
+            <li><a href="contato.html" class="block text-wmove-orange">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Formulário Section -->
+    <section class="py-16 px-6 md:px-24 max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+        <div class="md:w-1/2">
+            <h1 class="text-4xl font-serif text-wmove-green mb-4">Dê o primeiro passo.</h1>
+            <p class="text-gray-600 mb-8">Preencha os dados abaixo. Um de nossos consultores especializados entrará em contato em até 24 horas para entender sua necessidade.</p>
+            
+            <div class="space-y-4">
+                <div class="flex items-center gap-4 text-gray-700">
+                    <i class="fas fa-envelope text-wmove-orange text-xl"></i>
+                    <span>contato@wmove.com.br</span>
+                </div>
+                <div class="flex items-center gap-4 text-gray-700">
+                    <i class="fab fa-whatsapp text-wmove-orange text-xl"></i>
+                    <span>(11) 99999-9999</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg border-t-4 border-wmove-orange">
+            <form id="contact-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                    <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-wmove-orange focus:ring-1 focus:ring-wmove-orange">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-wmove-orange focus:ring-1 focus:ring-wmove-orange">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Telefone / WhatsApp</label>
+                        <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-wmove-orange focus:ring-1 focus:ring-wmove-orange">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Qual o motivo da viagem?</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-wmove-orange focus:ring-1 focus:ring-wmove-orange">
+                        <option>Lazer / Férias</option>
+                        <option>Corporativo / Negócios</option>
+                        <option>Grupos / Família</option>
+                        <option>Eventos</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Mensagem (Conte um pouco sobre o destino e as datas)</label>
+                    <textarea rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-wmove-orange focus:ring-1 focus:ring-wmove-orange"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-wmove-green text-white py-3 rounded font-medium hover:bg-emerald-900 transition flex justify-center items-center gap-2">
+                    Enviar Solicitação <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            
+            <!-- Mensagem de Sucesso (Oculta por padrão) -->
+            <div id="success-message" class="hidden mt-4 p-4 bg-green-50 text-green-800 border border-green-200 rounded text-center">
+                <i class="fas fa-check-circle text-green-500 text-2xl mb-2"></i>
+                <p class="font-medium">Mensagem enviada com sucesso!</p>
+                <p class="text-sm">Nossa equipe entrará em contato em breve.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">© 2026 Wmove Consultoria de Viagens. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
